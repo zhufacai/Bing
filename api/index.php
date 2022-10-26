@@ -13,7 +13,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 $resp = curl_exec($curl);
 curl_close($curl);
 $array = json_decode($resp);
-$imgurl = 'https://cn.bing.com'.$array->{"images"}[rand(0,9)]->{"urlbase"}.'_1920x1080.jpg';
+$imgurl = 'https://cn.bing.com'.$array->{"images"}[rand(0,5)]->{"urlbase"}.'_1920x1080.jpg';
 if($imgurl){		
     //允许跨域
     header("Access-Control-Allow-Origin: *");
